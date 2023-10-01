@@ -1,0 +1,16 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "projects/material-extended/mde/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "dist/material-extended/mde/package.json",
+      "type": "json"
+    }
+  ]
+}
