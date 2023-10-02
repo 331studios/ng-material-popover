@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 
-import { MdePopoverModule } from '@material-extended/mde';
+import { MaterialPopoverModule } from '@331studios/ng-material-popover';
 
 import { ExamplesModule } from './examples/examples.module';
 import { ErrorModule } from './error/error.module';
@@ -19,7 +19,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     MatCardModule,
     MatButtonModule,
-    MdePopoverModule,
+    MaterialPopoverModule,
     ErrorModule,
     ExamplesModule
   ],

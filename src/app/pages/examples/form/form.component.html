@@ -3,7 +3,7 @@
     <input matInput placeholder="Company (disabled)" disabled value="Google" (focus)="openPopover(companyTarget, 'Your company name.')" (blur)="closePopover(companyTarget)">
   </mat-form-field>
 
-  <table class="example-full-width" cellspacing="0" [mdePopoverTriggerFor]="inputPopover" mdePopoverTriggerOn="none" #nameTarget="mdePopoverTrigger">
+  <table class="example-full-width"  [mdePopoverTriggerFor]="inputPopover" mdePopoverTriggerOn="none" #nameTarget="mdePopoverTrigger">
     <tr>
       <td>
         <mat-form-field class="example-full-width">
@@ -19,10 +19,10 @@
   </table>
 
   <mde-popover #inputPopover="mdePopover"
-               mdeFocusTrapEnabled="false"
+               [mdeFocusTrapEnabled]="false"
                mdePopoverPositionY="below"
                mdePopoverPositionX="before"
-               mdePopoverOffsetY="0" mdePopoverOffsetX="250">
+               [mdePopoverOffsetY]="0" [mdePopoverOffsetX]="250">
     <div class="input-popover mat-elevation-z1">
       {{popoverText}}
     </div>
