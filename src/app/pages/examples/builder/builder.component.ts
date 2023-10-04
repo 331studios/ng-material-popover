@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { coerceNumberProperty } from '@angular/cdk/coercion';
+import {
+  MaterialPopoverComponent
+} from "../../../../../projects/material-popover/src/lib/material-popover/material-popover.component";
+import {
+  MdePopoverPositionX,
+  MdePopoverPositionY, MdePopoverTriggerEvent
+} from "../../../../../projects/material-popover/src/lib/material-popover/material-popover-types";
 
 @Component({
   selector: 'app-builder',
@@ -10,12 +17,12 @@ export class PageExamplesBuilderComponent {
 
   alignButton = 'align-left';
 
-  popover;
+  popover: any;
 
-  popoverPositionX = 'before';
-  popoverPositionY = 'above';
+  popoverPositionX: MdePopoverPositionX = 'before';
+  popoverPositionY: MdePopoverPositionY = 'above';
 
-  event = 'click';
+  event: MdePopoverTriggerEvent = 'click';
 
   autoTicks = false;
   disabled = false;

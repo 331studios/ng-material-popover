@@ -98,7 +98,7 @@
       "projectType": "library",
       "root": "projects/material-popover",
       "sourceRoot": "projects/material-popover/src",
-      "prefix": "s331",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 
-import { MdePopoverModule } from '@material-extended/mde';
+import { MaterialPopoverModule } from '@331studios/ng-material-popover';
 
 import { ExamplesRoutingModule } from './examples-routing.module';
 
@@ -32,7 +31,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonToggleModule,
     MatCheckboxModule,
     MatSelectModule,
-    MdePopoverModule,
+    MaterialPopoverModule,
     ExamplesRoutingModule,
     ErrorModule,
   ],

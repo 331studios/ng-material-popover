@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdePopoverTrigger } from '@material-extended/mde';
-
-// import 'rxjs/add/operator/first';
-
-import { first } from 'rxjs/operators';
+import { MdePopoverTrigger } from '@331studios/ng-material-popover';
 
 
 @Component({
@@ -13,8 +9,8 @@ import { first } from 'rxjs/operators';
 })
 export class PageExamplesFormComponent implements OnInit {
 
-  popoverText: string;
-  previousRef: MdePopoverTrigger;
+  popoverText?: string;
+  previousRef?: MdePopoverTrigger;
   popoverOpen = false;
   popoverSwitching = false;
 
@@ -28,10 +24,7 @@ export class PageExamplesFormComponent implements OnInit {
   openPopover(ref: MdePopoverTrigger, text: string) {
     console.log('this.previousRef', this.previousRef);
     console.log('ref', ref);
-    // if (this.previousRef !== ref) {
-    // this.popoverText = text;
-    // ref.openPopover();
-    // }
+
 
     if (this.previousRef !== ref) {
       console.log('this.previousRef !== ref');
@@ -53,55 +46,9 @@ export class PageExamplesFormComponent implements OnInit {
       // if (!this.popoverSwitching) {
         ref.closePopover();
         this.popoverOpen = false;
-        this.previousRef = null;
+        this.previousRef = undefined;
       // }
     }, 400);
-  }
-
-
-
-
-
-
-
-
-
-
-  openPopoverOld(ref: MdePopoverTrigger, text: string) {
-    console.log('this.previousRef', this.previousRef);
-    console.log('ref', ref);
-    // if (this.previousRef !== ref) {
-    // this.popoverText = text;
-    // ref.openPopover();
-    // }
-    if (this.popoverOpen) {
-      console.log('switching');
-      this.popoverSwitching = true;
-      // setTimeout(() => {
-      clearTimeout(this.closeTimeout);
-      // }, 200);
-    } else {
-      ref.openPopover();
-      this.popoverSwitching = false;
-    }
-    ref.closed.pipe(first()).subscribe(() => {
-      console.log('event', event);
-    });
-    this.popoverText = text;
-    this.previousRef = ref;
-    this.popoverOpen = true;
-  }
-
-  closePopoverOld(ref) {
-    this.closeTimeout = setTimeout(() => {
-      if (!this.popoverSwitching) {
-        ref.closePopover();
-        this.popoverOpen = false;
-        console.log('Close, this.popoverSwitching', this.popoverSwitching);
-      } else {
-        console.log('Don\'t close, this.popoverSwitching', this.popoverSwitching);
-      }
-    }, 600);
   }
 
 }

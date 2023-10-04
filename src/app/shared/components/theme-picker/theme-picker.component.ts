@@ -77,7 +77,7 @@ export class ThemePickerComponent implements OnInit {
   ngOnInit() {
   }
 
-  onItemKeydown(event, className = null) {
+  onItemKeydown(event: any, className = null) {
     const next = new ElementRef(event.nextSibling);
 
     if (event.keyCode === 9) {

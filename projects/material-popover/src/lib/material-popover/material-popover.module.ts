@@ -15,7 +15,7 @@ import { MaterialPopoverComponent } from './material-popover.component';
   imports: [
     OverlayModule,
     CommonModule,
-    A11yModule
+    A11yModule,
   ],
   exports: [
     MaterialPopoverComponent, MdePopoverTrigger, MdePopoverTarget

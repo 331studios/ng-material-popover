@@ -1,5 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, waitForAsync} from '@angular/core/testing';
+import { AppComponent, APP_TITLE } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -12,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 's331-angular-components'`, () => {
+  it(`should have as title ${APP_TITLE}`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('331-angular-components');
+    expect(app.title).toEqual(APP_TITLE);
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('331-angular-components app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain(`${APP_TITLE} app is running!`);
   });
 });

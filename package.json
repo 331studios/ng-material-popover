@@ -5,13 +5,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-lib": "ng build material-popover",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/331studios/material-popover"
+    "url": "https://github.com/331studios/ng-material-popover"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.6",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
