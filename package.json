@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build material-popover && ng build",
+    "build-lib": "ng build material-popover",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
