@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm build-lib
+      - run: npm run build-lib
       - run: cd ./dist/@331studios/ng-material-popover
       - run: npm pack
 
